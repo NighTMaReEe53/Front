@@ -1,0 +1,130 @@
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  @media (max-width: 992px) {
+    overflow: hidden;
+  }
+  .shape-contact-7 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 140px;
+    rotate: -10deg;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: -1;
+    @media (max-width: 776px) {
+      width: 50px;
+    }
+  }
+  .shape-contact-12 {
+    position: absolute;
+    right: 200px;
+    width: 100px;
+    rotate: -40deg;
+    opacity: 0.08;
+  }
+  .overlay-contact {
+    position: absolute;
+    background-color: #fff1;
+    width: 125%;
+    height: 40%;
+    right: -80px;
+    top: 280px;
+    rotate: -14deg;
+    z-index: -1;
+    @media (max-width: 776px) {
+      width: 75%;
+      height: 110%;
+      top: -7px;
+      right: auto;
+      left: -52px;
+    }
+    @media (min-width: 776px) and (max-width: 992px) {
+      width: 75%;
+      height: 125%;
+      right: auto;
+      top: 0;
+      rotate: -55deg;
+      left: 0;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    form {
+      flex-basis: 48%;
+      @media (max-width: 992px) {
+        flex-basis: 100%;
+        width: 100%;
+        order: 2;
+      }
+      input,
+      textarea {
+        display: block;
+        padding: 15px;
+        background-color: #FFF1;
+        backdrop-filter: blur(10px);
+        border-radius: 6px;
+        caret-color: var(--whiteColor);
+        width: 100%;
+        margin-bottom: 15px;
+        border: none;
+        border: 1px solid var(--whiteColor);
+        outline: none;
+        font-size: 17px;
+        color: var(--whiteColor);
+        transition: var(--trans);
+        &:focus {
+          box-shadow: 0 0 10px var(--mainColor) inset;
+          border: none;
+        }
+        &::placeholder {
+          color: #fff9;
+        }
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      button {
+        width: 80%;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .image {
+      flex-basis: 48%;
+      @media (max-width: 992px) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        @media (max-width: 776px) {
+          width: 350px;
+        }
+      }
+    }
+  }
+  .shape-contact-8 {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    @media(max-width:776px) {
+      left: auto;
+      right: 20px;
+    }
+    top: 30px;
+    opacity: 0.08;
+    width: 120px;
+  }
+}

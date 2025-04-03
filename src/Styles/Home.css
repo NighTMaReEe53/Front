@@ -1,0 +1,117 @@
+.landing {
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(95vh - 72px);
+    flex-direction: column;
+    gap: 20px;
+    .text {
+      text-align: center;
+      h2 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 1.5;
+        @media (max-width: 772px) {
+          font-size: 35px;
+        }
+        margin-bottom: 10px;
+        span {
+          display: inline-block;
+          position: relative;
+          padding-bottom: 10px;
+          border-bottom: 2px solid var(--mainColor);
+          &::before {
+            content: "";
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 2px;
+            background-color: var(--mainColor);
+            position: absolute;
+          }
+        }
+      }
+      p {
+        font-weight: normal;
+        color: #f2f2f2;
+        font-size: 17px;
+        margin: 15px 0;
+        line-height: 1.5;
+      }
+    }
+    .image {
+      img {
+        width: 400px;
+        @media (max-width: 772px) {
+          width: 350px;
+        }
+      }
+    }
+  }
+  .land-overlay {
+    position: absolute;
+    top: -80px;
+    width: 500px;
+    @media (max-width: 776px) {
+      width: 100%;
+      max-width: 100%;
+    }
+    z-index: -1;
+    height: 100%;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  .land-overlay-5 {
+    position: absolute;
+    left: 30px;
+    opacity: 0.08;
+    top: 30px;
+    width: 150px;
+    @media (max-width: 992px) {
+      width: 100px;
+    }
+    @media (max-width: 776px) {
+      display: none;
+    }
+  }
+  .land-overlay-1,
+  .land-overlay-7 {
+    position: absolute;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .land-overlay-1 {
+    width: 150px;
+    bottom: 0;
+    left: 20%;
+    pointer-events: none;
+  }
+  .land-overlay-7 {
+    right: 0;
+    width: 350px;
+    bottom: 0;
+    rotate: -45deg;
+    pointer-events: none;
+
+    @media (max-width: 776px) {
+      rotate: 0deg;
+      display: none;
+    }
+  }
+  .land-overlay-11 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    opacity: 0.08;
+    z-index: -1;
+    width: 150px;
+    @media (max-width: 776px) {
+      display: none;
+    }
+  }
+}

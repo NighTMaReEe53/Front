@@ -1,0 +1,74 @@
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  @media (max-width: 776px) {
+    overflow: hidden;
+  }
+  .overlay-team {
+    position: absolute;
+    background-color: #fff1;
+    width: 125%;
+    height: 50%;
+    right: -65px;
+    top: 150px;
+    rotate: 14deg;
+    @media (max-width: 776px) {
+      width: 75%;
+      height: 100%;
+      rotate: 27deg;
+      right: 0;
+    }
+    z-index: -1;
+  }
+  .team-shape {
+    position: absolute;
+    right: 20px;
+    width: 120px;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .box {
+      @media (min-width: 776px) and (max-width: 992px) {
+        flex-basis: 49%;
+      }
+      @media (max-width: 776px) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      text-align: center;
+      .image {
+        width: 200px;
+        background-color: #213549;
+        border-radius: 50%;
+        margin: 15px auto;
+        img {
+          width: 100%;
+          position: relative;
+          pointer-events: none;
+          top: 4px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        h2 {
+          font-size: 25px;
+          margin-bottom: 10px;
+          span {
+            color: var(--mainColor);
+          }
+        }
+        p {
+          color: #f2f2f2;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

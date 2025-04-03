@@ -1,0 +1,118 @@
+.news {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  .shape-new-1 {
+    width: 30px;
+    position: absolute;
+    right: 80px;
+    @media (max-width: 776px) {
+      top: 0;
+      right: 30px;
+    }
+    pointer-events: none;
+  }
+  .shape-new-2 {
+    position: absolute;
+    left: 100px;
+    width: 50px;
+    opacity: 0.08;
+    @media (max-width: 776px) {
+      top: 40px;
+      width: 60px;
+      left: 10px;
+    }
+    pointer-events: none;
+  }
+  .shape-new-3 {
+    position: absolute;
+    width: 80px;
+    opacity: 0.08;
+    bottom: 20px;
+    left: 20px;
+  }
+  .shape-new-4 {
+    position: absolute;
+    right: 20px;
+    @media (max-width: 776px) {
+      right: 0;
+      width: 350px;
+    }
+    pointer-events: none;
+    top: 0;
+    opacity: 0.08;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (min-width: 776px) and (max-width: 992px) {
+      gap: 20px;
+    }
+
+    @media(max-width:776px) {
+      gap: 30px;
+    }
+
+    .box {
+      flex-basis: 31%;
+      @media (min-width: 776px) and (max-width: 992px) {
+        flex-basis: 48%;
+      }
+      @media (max-width: 776px) {
+        width: 100%;
+        flex-basis: 100%;
+      }
+      background-color: #213549;
+      backdrop-filter: blur(2px);
+      padding: 10px;
+      border-radius: 6px;
+      blockquote {
+        color: #f2f2f2;
+        line-height: 1.5;
+        font-size: 20px;
+      }
+      .stars {
+        justify-content: center;
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .heart {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          width: 50px;
+          height: 50px;
+          border: 2px solid #F05;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          opacity: 0.5;
+        }
+        gap: 15px;
+        h2 {
+          color: var(--mainColor);
+          position: relative;
+          top: 10px;
+        }
+      }
+      img {
+        width: 80px;
+        border-radius: 50%;
+        background: #132436;
+        position: relative;
+        right: -15px;
+        top: 25px;
+        border: 2px solid var(--whiteColor);
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+    .text {
+      @media (max-width: 992px) {
+        order: 2;
+      }
+      > .main {
+        font-weight: bold;
+        font-size: 40px;
+        width: fit-content;
+        position: relative;
+        span {
+          color: var(--mainColor);
+        }
+        &::before {
+          content: "";
+          background: linear-gradient(
+            to right,
+            var(--whiteColor),
+            var(--mainColor)
+          );
+          height: 3px;
+          width: 80%;
+          position: absolute;
+          right: 0;
+          bottom: -15px;
+          border-radius: 50%;
+        }
+      }
+      p {
+        font-size: 17px;
+        color: #f2f2f2;
+        max-width: 450px;
+        line-height: 2;
+        @media (max-width: 776px) {
+          max-width: 350px;
+        }
+      }
+      h2 {
+        margin: 15px 0px;
+      }
+      .secondary {
+        font-variant: all-small-caps;
+        color: var(--mainColor);
+      }
+      .star {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+    .image {
+      img {
+        width: 500px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        @media (max-width: 776px) {
+          width: 350px;
+        }
+      }
+    }
+  }
+  .shape-about-1 {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 100px;
+    pointer-events: none;
+    @media (max-width: 776px) {
+      right: auto;
+      left: 20px;
+      width: 110px;
+    }
+    z-index: -1;
+  }
+  .shape-about-2 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 100px;
+    opacity: 0.08;
+    rotate: 45deg;
+    pointer-events: none;
+  }
+}

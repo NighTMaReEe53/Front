@@ -1,0 +1,21 @@
+.overlay-circle-right, .overlay-circle-left {
+  background-color: var(--whiteColor);
+  width: 500px;
+  height: 500px;
+  @media(max-width:776px) {
+    width: 350px;
+    height: 350px;
+  }
+  border-radius: 50%;
+  filter: blur(400px);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.overlay-circle-right {
+  right: 0;
+}
+.overlay-circle-left {
+  left: 0;
+}

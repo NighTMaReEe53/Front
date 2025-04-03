@@ -1,0 +1,112 @@
+.work {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  .work-shape-1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 130px;
+    @media (max-width: 776px) {
+      width: 90px;
+      top: 130px;
+    }
+
+    pointer-events: none;
+    opacity: 0.08;
+  }
+  .work-shape-2 {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    opacity: 0.08;
+    pointer-events: none;
+    width: 100px;
+    rotate: 38deg;
+    @media (max-width: 776px) {
+      width: 80px;
+      top: 120px;
+    }
+  }
+  .main-title {
+    @media (max-width: 776px) {
+      font-size: 28px !important;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (min-width: 776px) and (max-width: 992px) {
+      gap: 30px;
+    }
+    flex-wrap: wrap;
+    .box {
+      flex-basis: 48%;
+      @media (min-width: 776px) and (max-width: 992px) {
+        flex-basis: 47%;
+        flex-direction: column;
+      }
+      @media (max-width: 776px) {
+        flex-direction: column;
+        width: 100%;
+        flex-basis: 100%;
+      }
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .icon {
+        width: 80px;
+        height: 80px;
+        @media (max-width: 992px) {
+          width: 100px;
+          height: 100px;
+        }
+
+        background-color: #213549;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .text {
+        position: relative;
+        right: 20px;
+        @media (max-width: 776px) {
+          right: 0px;
+          text-align: center;
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          right: -40px;
+          @media (max-width: 776px) {
+            right: 0px;
+            top: -30px;
+          }
+
+          font-weight: bold;
+          color: var(--mainColor);
+          border: 1px solid #fff1;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 20px;
+        }
+        h2 {
+          font-weight: bold;
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 15px;
+          color: #fff9;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

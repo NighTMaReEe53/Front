@@ -1,0 +1,194 @@
+.register {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  .shape-register-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    rotate: -100deg;
+    z-index: -1;
+    opacity: 0.01;
+    pointer-events: none;
+  }
+  .shape-register-2 {
+    position: absolute;
+    width: 100px;
+    rotate: 10deg;
+    opacity: 0.08;
+    pointer-events: none;
+    bottom: 20px;
+    @media (max-width: 776px) {
+      bottom: auto;
+      top: 150px;
+      left: 20px;
+    }
+  }
+  .shape-register-3 {
+    position: absolute;
+    width: 100px;
+    opacity: 0.08;
+    right: 0;
+    top: 30px;
+    @media (max-width: 776px) {
+      top: 100px;
+      width: 90px;
+    }
+  }
+  .one {
+    position: absolute;
+    border-width: 40px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    bottom: 0;
+    left: 150px;
+    &::before {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      border-color: transparent transparent var(--whiteColor) transparent;
+      bottom: -50px;
+      left: 25px;
+      border-width: 48px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      border-color: transparent transparent var(--whiteColor) transparent;
+      bottom: -50px;
+      left: 98px;
+      border-width: 48px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border-width: 40px;
+    border-color: transparent transparent var(--whiteColor) transparent;
+    left: 76px;
+    bottom: 0;
+    border-style: solid;
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border-width: 1200px;
+    border-color: transparent transparent transparent var(--whiteColor);
+    left: 0;
+    top: 0;
+    border-style: solid;
+    z-index: -1;
+
+    @media (max-width: 776px) {
+      border-color: transparent transparent var(--whiteColor) transparent;
+      border-width: 40px;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .shape-register-4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    rotate: 20deg;
+    opacity: 0.08;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 776px) {
+      flex-direction: column;
+      width: 100%;
+    }
+    form {
+      flex-basis: 49%;
+      > .form-title {
+        font-size: 30px;
+        span {
+          color: var(--mainColor);
+          font-weight: bold;
+          display: inline-flex;
+          gap: 5px;
+          align-items: center;
+          img {
+            width: 40px;
+            top: 5px;
+            position: relative;
+          }
+        }
+      }
+      span {
+        color: #f2f2f2;
+        margin-bottom: 10px;
+        display: block;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+        a {
+          color: var(--mainColor);
+          transition: var(--trans);
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      @media (max-width: 776px) {
+        flex-basis: 100%;
+        width: 100%;
+        order: 2;
+      }
+      text-align: center;
+      input {
+        display: block;
+        width: 100%;
+        background-color: #fff1;
+        backdrop-filter: blur(5px);
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #fff1;
+        color: var(--whiteColor);
+        caret-color: var(--mainColor);
+        transition: var(--trans);
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        outline: none;
+        &:focus {
+          box-shadow: 0 0 5px var(--mainColor);
+        }
+      }
+    }
+    .secondary-btn {
+      width: 80%;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 17px;
+      letter-spacing: 1.2px;
+    }
+    .image {
+      flex: 1;
+      img {
+        width: 500px;
+        @media (min-width: 776px) and (max-width: 992px) {
+          width: 350px;
+        }
+        @media (max-width: 776px) {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
