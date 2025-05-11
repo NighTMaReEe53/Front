@@ -5,7 +5,7 @@ import "./Contact.css";
 import Animation from "../../../public/Animation/Contact.json";
 import Lottie from "lottie-react";
 
-const Contact = () => {
+const ContacT = () => {
   return (
     <div className="contact">
       <div className="cricle-left-small"></div>
@@ -30,7 +30,6 @@ const Contact = () => {
           />
         </form>
         <div className="image">
-          {/* <img src="image/contact/contact.png" alt="" /> */}
           <Lottie animationData={Animation} loop={true} /> 
         </div>
       </div>
@@ -38,4 +37,14 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContacT;
+
+
+
+
+
+
+
+
+
+

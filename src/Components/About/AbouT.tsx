@@ -3,6 +3,8 @@ import "../../Styles/About.css";
 import { BiCheckDouble } from "react-icons/bi";
 import CircleBlur from "../overlay/CircleBlur";
 
+import { motion } from "framer-motion";
+
 const AbouT = () => {
   return (
     <>
@@ -15,40 +17,80 @@ const AbouT = () => {
           <Title title="ماذا عنا" />
           <div className="content">
             <div className="text">
-              <h2 className="main">
+              <motion.h2
+                className="main"
+                // initial={{ opacity: 0, y: -20 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 نحن منصة <span>تدويري</span>
-              </h2>
-              <p>
+              </motion.h2>
+              <motion.p
+                // initial={{ opacity: 0, y: 20 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 قائمين علي اعادة تدوير النفايات بطريقة الكترونية وبأحدث الطرق
                 المستخدمة لتلبية احتياجات العميل بكل ما هو جديد
-              </p>
+              </motion.p>
               <h2 className="secondary">
                 بعض ما يميز منصة <span>تدويري</span> :-
               </h2>
-              <div className="star">
+              <motion.div
+                className="star"
+                // initial={{ opacity: 0, x: 20 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <BiCheckDouble size={30} color="#5dd7a4" />
                 <span>حسن التعامل مع العميل</span>
-              </div>
-              <div className="star">
+              </motion.div>
+              <motion.div
+                className="star"
+                // initial={{ opacity: 0, x: 20 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <BiCheckDouble size={30} color="#5dd7a4" />
-                <span>القيأم بعمليات التدوير بطريقة الكترونية</span>
-              </div>
-              <div className="star">
+                <span>القيام بعمليات التدوير بطريقة الكترونية</span>
+              </motion.div>
+              <motion.div
+                className="star"
+                // initial={{ opacity: 0, x: 20 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 0.6 }}
+              >
                 <BiCheckDouble size={30} color="#5dd7a4" />
                 <span>سرعة توصيل وعلي اعلي مستوي</span>
-              </div>
-              <div className="star">
+              </motion.div>
+              <motion.div
+                className="star"
+                // initial={{ opacity: 0, x: 20 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 0.7 }}
+              >
                 <BiCheckDouble size={30} color="#5dd7a4" />
                 <span>خدمة 24 ساعة</span>
-              </div>
-              <div className="star">
+              </motion.div>
+              <motion.div
+                className="star"
+                // initial={{ opacity: 0, x: 20 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 0.8 }}
+              >
                 <BiCheckDouble size={30} color="#5dd7a4" />
                 <span>تقديم اقتراحات</span>
-              </div>
+              </motion.div>
             </div>
-            <div className="image">
-              <img src="image/about.png" alt="" />
-            </div>
+            <motion.div className="image">
+              <motion.img
+                src="image/about.png"
+                alt=""
+                // initial={{ opacity: 0, x: -50 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 0.5, delay: 1 }}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

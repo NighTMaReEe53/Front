@@ -1,5 +1,11 @@
+import ServiceS from "../Components/Serv_Section/Services";
+import Work from "../Components/Work/Work";
+
 const Services = () => {
-  return <h2>Services</h2>;
+  return <>
+    <ServiceS />
+    <Work />
+  </>;
 };
 
 export default Services;

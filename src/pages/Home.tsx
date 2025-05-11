@@ -4,9 +4,11 @@ import Galary from "../Components/galary/Galary";
 import News from "../Components/News/News";
 import CircleBlur from "../Components/overlay/CircleBlur";
 import Services from "../Components/Serv_Section/Services";
-import Team from "../Components/Team/Team";
 import Work from "../Components/Work/Work";
 import "../Styles/Home.css";
+import { motion } from "framer-motion";
+import Product from "../Components/Product/Prodect";
+import OurNews from "../Components/OurNews/OurNews";
 
 const Home = () => {
   return (
@@ -40,17 +42,31 @@ const Home = () => {
         />
         <div className="container">
           <div className="text">
-            <h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               اهلا وسهلا بحضراتكم, نحن منصة <span>تدويري</span>
-            </h2>
-            <p>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               {" "}
               نحن عالم واسع لعمل تدوير للنفايات الالكترونية ونسعي الي تحقيق
               رغباتك بأكبر قدر ممكن
-            </p>
+            </motion.p>
           </div>
           <div className="image">
-            <img src="image/landing.png" alt="" />
+            <motion.img
+              src="image/landing.png"
+              alt=""
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            />
           </div>
         </div>
       </div>
@@ -60,6 +76,7 @@ const Home = () => {
       {/* Start Section Services */}
       <Services />
       {/* End Section Services */}
+      <Product />
       {/* Start Section Galary */}
       <Galary />
       {/* End Section Galary */}
@@ -69,9 +86,7 @@ const Home = () => {
       {/* Start Team News */}
       <News />
       {/* End Team News */}
-      {/* Start Team Team */}
-      <Team />
-      {/* End Team Team */}
+      <OurNews />
       {/* Start Team Contact */}
       <Contact />
       {/* End Team Contact */}

@@ -1,0 +1,61 @@
+.our-product {
+  padding: 60px 0px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    .box {
+      flex-basis: 24%;
+      @media (min-width: 776px) and (max-width: 992px) {
+        flex-basis: 48%;
+      }
+      @media (max-width: 776px) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      background-color: #fff1;
+      padding: 15px;
+      border-radius: 6px;
+      .image {
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: contain;
+        }
+      }
+      .text {
+        .btns {
+          display: flex;
+          gap: 10px;
+          margin-top: 10px ;
+          button {
+            display: flex;
+            padding: 10px 15px;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        h2 {
+          font-weight: bold;
+        }
+        p {
+          color: #fff8;
+        }
+        span {
+          font-size: 17px;
+          color: #f2f2f2;
+          span {
+            color: var(--mainColor);
+            font-weight: bold;
+          }
+          del {
+            color: #f05;
+          }
+        }
+      }
+    }
+  }
+}

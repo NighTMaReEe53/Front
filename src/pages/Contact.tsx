@@ -1,5 +1,9 @@
+import ContacT from "../Components/Contact/Contact";
+
 const Contact = () => {
-  return <h2>Contact</h2>;
+  return <>
+    <ContacT />
+  </>;
 };
 
 export default Contact;

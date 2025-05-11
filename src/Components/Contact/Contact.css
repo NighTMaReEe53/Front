@@ -2,9 +2,6 @@
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative;
-  @media (max-width: 992px) {
-    overflow: hidden;
-  }
   .shape-contact-7 {
     position: absolute;
     bottom: 20px;
@@ -24,6 +21,11 @@
     width: 100px;
     rotate: -40deg;
     opacity: 0.08;
+    @media (max-width: 776px) {
+      top: -68px;
+      left: 0;
+      right: auto;
+    }
   }
   .overlay-contact {
     position: absolute;
@@ -35,11 +37,12 @@
     rotate: -14deg;
     z-index: -1;
     @media (max-width: 776px) {
-      width: 75%;
+      /* width: 75%;
       height: 110%;
       top: -7px;
       right: auto;
-      left: -52px;
+      left: -52px; */
+      display: none;
     }
     @media (min-width: 776px) and (max-width: 992px) {
       width: 75%;
@@ -67,7 +70,7 @@
       textarea {
         display: block;
         padding: 15px;
-        background-color: #FFF1;
+        background-color: #fff1;
         backdrop-filter: blur(10px);
         border-radius: 6px;
         caret-color: var(--whiteColor);
@@ -119,12 +122,14 @@
     position: absolute;
     pointer-events: none;
     left: 20px;
-    @media(max-width:776px) {
-      left: auto;
-      right: 20px;
-    }
     top: 30px;
     opacity: 0.08;
     width: 120px;
+    @media (max-width: 776px) {
+      left: auto;
+      right: 20px;
+      top: 147px;
+      width: 100px;
+    }
   }
 }

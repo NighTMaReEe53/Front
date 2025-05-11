@@ -11,6 +11,8 @@ import Contact from "../pages/Contact";
 import Services from "../pages/Services";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import TeaM from "../pages/TeaM";
+import ProducT from "../pages/ProducT";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,8 @@ export const router = createBrowserRouter(
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="services" element={<Services />} />
+        <Route path="team" element={<TeaM />} />
+        <Route path="add-product" element={<ProducT />} />
       </Route>
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />

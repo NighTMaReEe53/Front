@@ -1,6 +1,5 @@
 .nav {
   padding: 15px 0;
-  min-height: 72px;
   position: relative;
   z-index: 10;
   .container {
@@ -13,7 +12,7 @@
     align-items: center;
     gap: 10px;
     font-size: 25px;
-    @media(max-width:776px) {
+    @media (max-width: 776px) {
       font-size: 20px;
     }
     color: var(--whiteColor);
@@ -27,6 +26,9 @@
       position: relative;
       top: 5px;
     }
+  }
+  .image {
+    cursor: pointer;
   }
   .Links {
     display: flex;
@@ -115,12 +117,53 @@
   height: 100%;
   z-index: 10;
   transition: var(--trans) ease;
-  @media(min-width:992px) {
+  @media (min-width: 992px) {
     display: none;
   }
   &.show {
     left: 0;
   }
+}
+
+.light-box {
+  background-color: #FFF1;
+  padding: 15px;
+  border-radius: 4px;
+  position: absolute;
+  left: 10px;
+  top: 72px;
+  h2, h3 {
+    margin-bottom: 10px;
+    span {
+      color: var(--mainColor);
+    }
+  }
+  h3 {
+    font-size: 17px;
+  }
+}
+.logout {
+  padding: 15px;
+  background-color: #f05;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 150px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  &:active {
+    scale: 0.95;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+  cursor: pointer;
+  font-size: 18px;
 }
 
 /* Media Query */

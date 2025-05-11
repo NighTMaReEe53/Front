@@ -2,6 +2,7 @@ import Title from "../TitleMain/Title";
 import { IoIosStar } from "react-icons/io";
 import "./News.css";
 import { HiHeart } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const News = () => {
   return (
@@ -12,7 +13,12 @@ const News = () => {
       <img src="image/shape/shape-3.png" className="shape-new-3" alt="" />
       <Title title="أراء العملاء" />
       <div className="container">
-        <div className="box">
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, x: 0 }}
+        >
           <div className="stars">
             <IoIosStar color="#ffc107" size={30} />
             <IoIosStar color="#ffc107" size={30} />
@@ -32,8 +38,13 @@ const News = () => {
               </span>
             </div>
           </div>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, scale: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+        >
           <div className="stars">
             <IoIosStar color="#ffc107" size={30} />
             <IoIosStar color="#ffc107" size={30} />
@@ -53,8 +64,13 @@ const News = () => {
               </span>
             </div>
           </div>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          whileInView={{ opacity: 1, x: 0 }}
+        >
           <div className="stars">
             <IoIosStar color="#ffc107" size={30} />
             <IoIosStar color="#ffc107" size={30} />
@@ -74,10 +90,16 @@ const News = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default News;
+
+
+
+
+
+

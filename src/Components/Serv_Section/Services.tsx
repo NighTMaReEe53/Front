@@ -4,12 +4,24 @@ import "./Serv.css";
 import { TbSettingsHeart } from "react-icons/tb";
 import CircleBlur from "../overlay/CircleBlur";
 
-const Services = () => {
+const ServiceS = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="services">
       <img src="image/shape/shape-7.png" className="shape-services-1" alt="" />
       <img src="image/shape/shape-11.png" className="shape-services-2" alt="" />
-      {/* <img src="test.webp" className="shape-services-3" alt="" /> */}
       <CircleBlur text="right" />
       <Title title="خدامتنا" isTrue={false} />
       <div className="container">
@@ -50,4 +62,8 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServiceS;
+
+
+
+

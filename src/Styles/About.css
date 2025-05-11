@@ -98,3 +98,62 @@
     pointer-events: none;
   }
 }
+
+.about-us {
+  .content-about {
+    padding: 60px 0px;
+    position: relative;
+
+    .image-about-shape-1 {
+      position: absolute;
+      top: -150px;
+      @media (min-width: 776px) and (max-width: 992px) {
+        top: -100px;
+      }
+      left: 0;
+      opacity: 0.08;
+      z-index: -1;
+      pointer-events: none;
+      width: 90%;
+    }
+
+    .shape-about-us-2 {
+      position: absolute;
+      top: -50px;
+      right: 10px;
+      width: 150px;
+      pointer-events: none;
+      opacity: 0.1;
+      rotate: 10deg;
+      @media (max-width: 776px) {
+        top: auto;
+        bottom: -50px;
+        width: 100px;
+      }
+    }
+  }
+  .content-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: wrap;
+    .box {
+      flex-basis: 24%;
+      @media (min-width: 776px) and (max-width: 992px) {
+        flex-basis: 49%;
+      }
+      @media (max-width: 776px) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      iframe {
+        border-bottom-right-radius: 60px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+  }
+}
